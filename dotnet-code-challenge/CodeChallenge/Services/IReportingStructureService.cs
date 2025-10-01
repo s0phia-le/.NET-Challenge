@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CodeChallenge.Services
 {
-    public interface IEReportingStructureService
+    public interface IReportingStructureService
     {
         ReportingStructure Create(String id);
     }
