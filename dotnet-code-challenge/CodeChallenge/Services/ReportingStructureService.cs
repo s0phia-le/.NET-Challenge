@@ -9,12 +9,12 @@ using CodeChallenge.Models;
 
 namespace CodeChallenge.Services
 {
-    public class ReportingStructureService : IEReportingStructureService
+    public class ReportingStructureService : IReportingStructureService
     {
         private readonly IEmployeeService _employeeService;
-        private readonly ILogger<EmployeeService> _logger;
+        private readonly ILogger<ReportingStructureService> _logger;
 
-        public ReportingStructureService(ILogger<EmployeeService> logger, IEmployeeService empService)
+        public ReportingStructureService(ILogger<ReportingStructureService> logger, IEmployeeService empService)
         {
             _employeeService = empService;
             _logger = logger;

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CodeChallenge.Services;
 using CodeChallenge.Models;
+using challenge.Models;
 
 namespace CodeChallenge.Controllers
 {
@@ -21,5 +22,15 @@ namespace CodeChallenge.Controllers
             _reportingStructureService = reportingStructureService;
         }
 
+        [HttpGet("{id}", Name = "getEmployeeReportingStructureById")]
+        public IActionResult GetEmployeeReportingStructureById(String id) {
+            _logger.LogDebug($"Received employee get reporting Structure for '{id}'");
+
+            ReportingStructure st = _reportingStructureService.Create(id);
+
+            if (st == null) return NotFound();
+
+            return Ok(st);
+        }
     }
 }
