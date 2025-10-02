@@ -7,7 +7,8 @@ using CodeChallenge.Models;
 
 using CodeCodeChallenge.Tests.Integration.Extensions;
 using CodeCodeChallenge.Tests.Integration.Helpers;
-
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.TestHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CodeCodeChallenge.Tests.Integration
@@ -23,8 +24,8 @@ namespace CodeCodeChallenge.Tests.Integration
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>")]
         public static void InitializeClass(TestContext context)
         {
-            _testServer = new TestServer();
-            _httpClient = _testServer.NewClient();
+            _testServer = new TestServer(WebHost.CreateDefaultBuilder());
+            _httpClient = _testServer.CreateClient();
         }
 
         [ClassCleanup]

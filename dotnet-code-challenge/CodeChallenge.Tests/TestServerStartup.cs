@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using CodeChallenge.Repositories;
 using CodeChallenge.Services;
 using CodeChallenge.Helpers;
+using challenge.Services;
 
 namespace code_challenge.Tests.Integration
 {
