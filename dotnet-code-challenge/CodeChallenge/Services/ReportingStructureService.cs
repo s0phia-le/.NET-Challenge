@@ -22,13 +22,14 @@ namespace CodeChallenge.Services
 
         public ReportingStructure Create(string id)
         {
-            var parentEmployee = _employeeService.GetById(id);
-            var reportsCount = GetReportingCount(parentEmployee);
+            var manager = _employeeService.GetById(id);
+            if (manager == null) return null;
+            var rcount = GetReportingCount(manager);
 
             return new ReportingStructure()
             {
-                numberOfReports = reportsCount,
-                Manager = parentEmployee
+                numberOfReports = rcount,
+                Manager = manager
             };
         }
 
