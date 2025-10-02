@@ -44,5 +44,18 @@ namespace CodeChallenge.Helpers
             newEmployee.DirectReports = new List<Employee>();
             return newEmployee;
         }
+
+        public Compensation CompensationDTO_To_Compensation(CompensationDto compDTO)
+        {
+            var employee = _employeeRepository.GetById(compDTO.EmployeeID);
+            if (employee == null) return null;
+
+            return new Compensation()
+            {
+                Employee = employee,
+                EffectiveDate = compDTO.EffectiveDate,
+                Salary = compDTO.Salary
+            };
+        }
     }
 }
