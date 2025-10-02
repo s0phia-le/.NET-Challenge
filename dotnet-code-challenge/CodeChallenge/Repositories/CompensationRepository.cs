@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using challenge.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using CodeChallenge.Data;
 
 namespace challenge.Repositories
 {

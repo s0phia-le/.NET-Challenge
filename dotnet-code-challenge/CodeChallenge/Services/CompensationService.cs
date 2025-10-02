@@ -21,7 +21,7 @@ namespace challenge.Services
         {
             if (compensationDto == null) return null;
             
-            var newCompensation = _mapper.CompensationDto_To_Compensation(compensationDto);
+            var newCompensation = _mapper.CompensationDTO_To_Compensation(compensationDto);
             
             // No employee with that id found
             if (newCompensation == null) return null;
