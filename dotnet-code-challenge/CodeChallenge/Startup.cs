@@ -22,16 +22,24 @@ namespace CodeChallenge
 
         public IConfiguration Configuration { get; }
 
+        // Configures services and request pipelines
         public void ConfigureServices(IServiceCollection services)
         {
+            // Configure in-memory database for employee data
             services.AddDbContext<EmployeeContext>(options =>
                 options.UseInMemoryDatabase("EmployeeDB"));
 
+            // Register repositories for dependency injections
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddScoped<ICompensationRepository, CompensationRepository>();
+
+            // Populate DB on startup
             services.AddTransient<EmployeeDataSeeder>();
 
-            services.AddScoped<IMapper, Mapper>(); // Make sure namespace matches
+            // Mapper to handle DTO-to-Entity conversions
+            services.AddScoped<IMapper, Mapper>(); 
+
+            // Register services for business logic
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IReportingStructureService, ReportingStructureService>();
             services.AddScoped<ICompensationService, CompensationService>();
@@ -47,7 +55,7 @@ namespace CodeChallenge
                 app.UseDeveloperExceptionPage();
                 seeder.Seed().Wait();
             }
-
+            // use MVC routing
             app.UseMvc();
         }
     }

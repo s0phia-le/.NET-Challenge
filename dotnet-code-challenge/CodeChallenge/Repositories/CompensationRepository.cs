@@ -5,10 +5,10 @@ using CodeChallenge.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using CodeChallenge.Data;
-using CodeChallenge.Models;
 
 namespace CodeChallenge.Repositories
 {
+    // Repository for managing Compensation entities in the database
     public class CompensationRepository : ICompensationRepository
     {
         private readonly EmployeeContext _employeeContext;
@@ -18,6 +18,7 @@ namespace CodeChallenge.Repositories
             _employeeContext = employeeContext;
         }
 
+        // Adds a new Compensation to the context. CompensationId is generated here
         public Compensation Add(Compensation compensation)
         {
             compensation.CompensationId = Guid.NewGuid().ToString();
@@ -25,6 +26,7 @@ namespace CodeChallenge.Repositories
             return compensation;
         }
 
+        // Retrieves a Compensation by employee ID
         public Compensation GetById(string employeeId)
         {
             return _employeeContext.Compensations.Where(c => c.Employee.EmployeeId == employeeId)
@@ -32,6 +34,7 @@ namespace CodeChallenge.Repositories
                 .FirstOrDefault();
         }
 
+        // Persists changes made to the context asynchronously
         public Task SaveAsync()
         {
             return _employeeContext.SaveChangesAsync();

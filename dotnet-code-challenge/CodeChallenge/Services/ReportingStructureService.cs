@@ -8,6 +8,7 @@ using CodeChallenge.Repositories;
 
 namespace CodeChallenge.Services
 {
+    // Computes reporting structures for employees
     public class ReportingStructureService : IReportingStructureService
     {
         private readonly IEmployeeService _employeeService;
@@ -19,6 +20,7 @@ namespace CodeChallenge.Services
             _logger = logger;
         }
 
+        // Creates a ReportingStructure for an employee
         public ReportingStructure Create(string id)
         {
             var manager = _employeeService.GetById(id);
@@ -32,6 +34,7 @@ namespace CodeChallenge.Services
             };
         }
 
+        // Recursively counts all direct and indirect reports for a given employee
         private int GetReportingCount(Employee employee)
         {
             int rcount = employee.DirectReports.Count;
