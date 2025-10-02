@@ -78,6 +78,17 @@ namespace CodeCodeChallenge.Tests.Integration
             Assert.IsNotNull(report);
             Assert.IsNotNull(report.numberOfReports);
             Assert.IsNotNull(report.Manager);
+            Assert.AreEqual(exp.Manager.FirstName, report.Manager.FirstName);
+            Assert.AreEqual(exp.Manager.LastName, report.Manager.LastName);
+            Assert.AreEqual(exp.Manager.Department, report.Manager.Department);
+            Assert.AreEqual(exp.Manager.Position, report.Manager.Position);
+            
+            Assert.AreEqual(exp.Manager.DirectReports[0].EmployeeId, report.Manager.DirectReports[0].EmployeeId);
+            Assert.AreEqual(exp.Manager.DirectReports[1].EmployeeId, report.Manager.DirectReports[1].EmployeeId);
+            Assert.AreEqual(exp.Manager.DirectReports[1].DirectReports[0].EmployeeId, report.Manager.DirectReports[1].DirectReports[0].EmployeeId);
+            Assert.AreEqual(exp.Manager.DirectReports[1].DirectReports[1].EmployeeId, report.Manager.DirectReports[1].DirectReports[1].EmployeeId);
+            
+            Assert.AreEqual(exp.numberOfReports, report.numberOfReports);
         }
     }
 }
