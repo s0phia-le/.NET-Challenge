@@ -5,18 +5,17 @@ using challenge.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using CodeChallenge.Data;
+using CodeChallenge.Models;
 
 namespace challenge.Repositories
 {
     public class CompensationRepository : ICompensationRepository
     {
         private readonly EmployeeContext _employeeContext;
-        private readonly ILogger<ICompensationRepository> _logger;
 
-        public CompensationRepository(ILogger<ICompensationRepository> logger, EmployeeContext employeeContext)
+        public CompensationRepository(EmployeeContext employeeContext)
         {
             _employeeContext = employeeContext;
-            _logger = logger;
         }
 
         public Compensation Add(Compensation compensation)
