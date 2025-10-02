@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using CodeChallenge.DTO;
 using CodeChallenge.Models;
-using CodeChallenge.Models;
 using CodeChallenge.Repositories;
 using CodeChallenge.Services;
 using Microsoft.Extensions.Logging;
@@ -13,7 +12,7 @@ namespace CodeChallenge.Helpers
         private readonly IEmployeeRepository _employeeRepository;
         private readonly ILogger<Mapper> _logger;
 
-        public Mapper(ILogger<Mapper> logger, IEmployeeRepository empRepo)
+        public Mapper(IEmployeeRepository empRepo, ILogger<Mapper> logger)
         {
             _employeeRepository = empRepo;
             _logger = logger;

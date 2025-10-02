@@ -1,6 +1,5 @@
 using CodeChallenge.DTO;
 using CodeChallenge.Models;
-using CodeChallenge.Models;
 
 namespace CodeChallenge.Helpers
 {

@@ -1,5 +1,4 @@
 using CodeChallenge.Models;
-using CodeChallenge.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

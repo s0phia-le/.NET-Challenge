@@ -1,22 +1,15 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-
 using Microsoft.EntityFrameworkCore;
-using CodeChallenge.Repositories;
-using CodeChallenge.Services;
 using CodeChallenge.Data;
 using CodeChallenge.Repositories;
 using CodeChallenge.Services;
 using CodeChallenge.Helpers;
-
+using Microsoft.Extensions.Hosting;
 
 namespace CodeChallenge
 {
@@ -29,25 +22,25 @@ namespace CodeChallenge
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<EmployeeContext>(options =>
-            {
-                options.UseInMemoryDatabase("EmployeeDB");
-            });
-            services.AddScoped<IEmployeeRepository,EmployeeRespository>();
-            services.AddScoped<ICompensationRepository,CompensationRepository>();
+                options.UseInMemoryDatabase("EmployeeDB"));
+
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<ICompensationRepository, CompensationRepository>();
             services.AddTransient<EmployeeDataSeeder>();
+
+            services.AddScoped<IMapper, Mapper>(); // Make sure namespace matches
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IReportingStructureService, ReportingStructureService>();
             services.AddScoped<ICompensationService, CompensationService>();
-            services.AddScoped<IMapper, Mapper>();
-            services.AddMvc();
+
+            // Disable endpoint routing to allow UseMvc
+            services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, EmployeeDataSeeder seeder)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, EmployeeDataSeeder seeder)
         {
             if (env.IsDevelopment())
             {

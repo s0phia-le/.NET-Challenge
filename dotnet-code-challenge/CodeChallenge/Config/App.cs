@@ -2,12 +2,12 @@
 using CodeChallenge.Services;
 using CodeChallenge.Data;
 using CodeChallenge.Repositories;
-using CodeChallenge.Services;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using CodeChallenge.Helpers;
 
 namespace CodeChallenge.Config
 {
@@ -43,7 +43,8 @@ namespace CodeChallenge.Config
         {
 
             services.AddScoped<IEmployeeService, EmployeeService>();
-            services.AddScoped<IEmployeeRepository, EmployeeRespository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IMapper, Mapper>();
 
             services.AddControllers();
         }
