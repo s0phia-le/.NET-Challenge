@@ -5,29 +5,38 @@ using System.Threading.Tasks;
 using CodeChallenge.Models;
 using Microsoft.Extensions.Logging;
 using CodeChallenge.Repositories;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using CodeChallenge.Helpers;
+using challenge.DTO;
+using CodeChallenge.Services;
 
-namespace CodeChallenge.Services
+
+namespace challenge.Services
 {
     public class EmployeeService : IEmployeeService
     {
         private readonly IEmployeeRepository _employeeRepository;
         private readonly ILogger<EmployeeService> _logger;
+        private readonly IMapper _mapper;
 
-        public EmployeeService(ILogger<EmployeeService> logger, IEmployeeRepository employeeRepository)
+        public EmployeeService(ILogger<EmployeeService> logger, IEmployeeRepository employeeRepository, IMapper mapper)
         {
             _employeeRepository = employeeRepository;
             _logger = logger;
+            _mapper = mapper;
         }
 
-        public Employee Create(Employee employee)
+        public Employee Create(EmployeeDto employeeDto)
         {
-            if(employee != null)
+            if(employeeDto != null)
             {
-                _employeeRepository.Add(employee);
+                // Converts String EmployeeIDs in DTO to Employee Objects
+                var newEmployee = _employeeRepository.Add(_mapper.EmployeeDTO_To_Employee(employeeDto));
                 _employeeRepository.SaveAsync().Wait();
+                return newEmployee;
             }
 
-            return employee;
+            return null;
         }
 
         public Employee GetById(string id)
@@ -59,5 +68,6 @@ namespace CodeChallenge.Services
 
             return newEmployee;
         }
+        
     }
 }

@@ -7,6 +7,8 @@ using CodeChallenge.Data;
 using Microsoft.EntityFrameworkCore;
 using CodeChallenge.Repositories;
 using CodeChallenge.Services;
+using CodeChallenge.Helpers;
+
 namespace code_challenge.Tests.Integration
 {
     public class TestServerStartup
@@ -25,7 +27,7 @@ namespace code_challenge.Tests.Integration
             {
                 options.UseInMemoryDatabase("EmployeeDB");
             });
-            services.AddScoped<IEmployeeRepository,EmployeeRespository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRespository>();
             services.AddTransient<EmployeeDataSeeder>();
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IReportingStructureService, ReportingStructureService>();
@@ -41,7 +43,7 @@ namespace code_challenge.Tests.Integration
                 app.UseDeveloperExceptionPage();
                 seeder.Seed().Wait();
             }
-            
+
             app.UseMvc();
 
         }
