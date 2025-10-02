@@ -1,4 +1,4 @@
-﻿using challenge.Models;
+﻿using CodeChallenge.Models;
 using CodeChallenge.Models;
 using Microsoft.EntityFrameworkCore;
 using System;

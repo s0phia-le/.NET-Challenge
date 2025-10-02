@@ -1,8 +1,8 @@
-﻿using challenge.Models;
+﻿using CodeChallenge.Models;
 using System;
-using challenge.DTO;
+using CodeChallenge.DTO;
 
-namespace challenge.Services
+namespace CodeChallenge.Services
 {
     public interface ICompensationService
     {

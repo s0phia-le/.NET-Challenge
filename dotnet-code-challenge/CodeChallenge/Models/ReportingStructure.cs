@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CodeChallenge.Models;
 
-namespace challenge.Models
+namespace CodeChallenge.Models
 {
     public class ReportingStructure
     {

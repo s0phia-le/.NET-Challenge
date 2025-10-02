@@ -1,8 +1,8 @@
-using challenge.Models;
+using CodeChallenge.Models;
 using System;
 using System.Threading.Tasks;
 
-namespace challenge.Repositories
+namespace CodeChallenge.Repositories
 {
     public interface ICompensationRepository
     {

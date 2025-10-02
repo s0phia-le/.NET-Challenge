@@ -1,10 +1,10 @@
 using System;
-using challenge.DTO;
-using challenge.Models;
-using challenge.Repositories;
+using CodeChallenge.DTO;
+using CodeChallenge.Models;
+using CodeChallenge.Repositories;
 using CodeChallenge.Helpers;
 
-namespace challenge.Services
+namespace CodeChallenge.Services
 {
     public class CompensationService : ICompensationService
     {

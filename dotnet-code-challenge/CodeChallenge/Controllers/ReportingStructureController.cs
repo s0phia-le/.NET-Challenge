@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CodeChallenge.Services;
 using CodeChallenge.Models;
-using challenge.Models;
+using CodeChallenge.Models;
 
 namespace CodeChallenge.Controllers
 {

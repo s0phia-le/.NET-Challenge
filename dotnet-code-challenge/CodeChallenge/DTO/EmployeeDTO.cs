@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace challenge.DTO
+namespace CodeChallenge.DTO
 {
     public class EmployeeDto
     {

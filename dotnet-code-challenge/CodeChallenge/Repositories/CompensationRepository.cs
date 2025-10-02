@@ -1,13 +1,13 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using challenge.Models;
+using CodeChallenge.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using CodeChallenge.Data;
 using CodeChallenge.Models;
 
-namespace challenge.Repositories
+namespace CodeChallenge.Repositories
 {
     public class CompensationRepository : ICompensationRepository
     {

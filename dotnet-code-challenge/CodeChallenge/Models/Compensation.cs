@@ -1,8 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using CodeChallenge.Models;
 
-namespace challenge.Models
+namespace CodeChallenge.Models
 {
     public class Compensation
     {

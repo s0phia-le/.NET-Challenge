@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using challenge.DTO;
-using challenge.Models;
+using CodeChallenge.DTO;
+using CodeChallenge.Models;
 using CodeChallenge.Models;
 using CodeChallenge.Repositories;
 using CodeChallenge.Services;

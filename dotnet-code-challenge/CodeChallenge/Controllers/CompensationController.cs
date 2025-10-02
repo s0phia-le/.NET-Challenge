@@ -1,9 +1,9 @@
 ﻿using System;
-using challenge.DTO;
+using CodeChallenge.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using challenge.Services;
-using challenge.Models;
+using CodeChallenge.Services;
+using CodeChallenge.Models;
 
 namespace challenge.Controllers
 {

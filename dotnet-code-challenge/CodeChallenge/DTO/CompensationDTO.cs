@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace challenge.DTO
+namespace CodeChallenge.DTO
 {
     public class CompensationDto
     {

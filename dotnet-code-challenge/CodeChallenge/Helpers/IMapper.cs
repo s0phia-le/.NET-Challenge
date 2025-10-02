@@ -1,5 +1,5 @@
-using challenge.DTO;
-using challenge.Models;
+using CodeChallenge.DTO;
+using CodeChallenge.Models;
 using CodeChallenge.Models;
 
 namespace CodeChallenge.Helpers

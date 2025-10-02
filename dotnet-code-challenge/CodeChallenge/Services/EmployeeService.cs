@@ -7,11 +7,11 @@ using Microsoft.Extensions.Logging;
 using CodeChallenge.Repositories;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using CodeChallenge.Helpers;
-using challenge.DTO;
+using CodeChallenge.DTO;
 using CodeChallenge.Services;
 
 
-namespace challenge.Services
+namespace CodeChallenge.Services
 {
     public class EmployeeService : IEmployeeService
     {

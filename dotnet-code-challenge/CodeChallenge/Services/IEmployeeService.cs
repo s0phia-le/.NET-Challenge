@@ -1,4 +1,4 @@
-﻿using challenge.DTO;
+﻿using CodeChallenge.DTO;
 using CodeChallenge.Models;
 using System;
 using System.Collections.Generic;
