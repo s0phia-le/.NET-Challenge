@@ -1,0 +1,17 @@
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\bin\Debug\netcoreapp2.1\resources\EmployeeSeedData.json
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.deps.json
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.runtimeconfig.json
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.runtimeconfig.dev.json
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.dll
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.pdb
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.csproj.AssemblyReference.cache
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.AssemblyInfoInputs.cache
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.AssemblyInfo.cs
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.csproj.CoreCompileInputs.cache
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.sourcelink.json
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.dll
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.pdb
+C:\Users\sophi\Mindex-Coding-Challenge\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.genruntimeconfig.cache
