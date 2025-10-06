@@ -1,4 +1,33 @@
 # Mindex Coding Challenge
+
+## Challenges I ran into:
+Integration tests rely on an in-memory database to simulate real data. Several tests were failing because the in-memory DB was either empty or seeded incorrectly.
+
+# Issues Encountered:
+- Missing seed data (some required entities were not seeded, causing NotFound errors)
+- Incorrect relationships (EF Core shadow properties were created due to mismatched primary/foreign keys, leading to validation warnings and unexpected behavior
+- Test failures (Assertion failures because the controllers could not find the seeded data)
+
+# Workarounds Attempted:
+- Manually seeded minimal test data for Employees and Compensations
+- Verified endpoints locally using curl commands to ensure they returned the correct status codes for available data
+- Fixed compilation issues in unit test project to allow running tests, even though some tests fail due to incomplete data
+
+# Remaining Limitations:
+- Full integration test suite could not pass due to incomplete data seeding and complex relationships
+- If I had more time, I would properly seed all necessary entities and configure EF Core relationships so all tests would pass as expected
+
+
+
+
+
+
+
+
+
+
+
+
 ## What's Provided
 A simple [.Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) web application has been created and bootstrapped 
 with data. The application contains information about all employees at a company. On application start-up, an in-memory 
@@ -84,4 +113,5 @@ two new Compensation REST endpoints. One to create and one to read by employeeId
 Compensation from the persistence layer.
 
 ## Delivery
+
 Please upload your results to a publicly accessible Git repo. Free ones are provided by Github and Bitbucket.
