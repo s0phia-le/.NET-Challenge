@@ -2,8 +2,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-using challenge.Models;
-using code_challenge.Tests.Integration;
+using CodeChallenge.Tests.Integration;
 using CodeChallenge.Models;
 
 using CodeCodeChallenge.Tests.Integration.Extensions;
@@ -13,9 +12,9 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using challenge.DTO;
+using CodeChallenge.DTO;
 
-namespace CodeCodeChallenge.Tests.Integration
+namespace CodeChallenge.Tests.Integration
 {
     [TestClass]
     public class ReportingStructureControllerTests

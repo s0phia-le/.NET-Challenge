@@ -8,10 +8,11 @@ using CodeChallenge.Models;
 using CodeCodeChallenge.Tests.Integration.Extensions;
 using CodeCodeChallenge.Tests.Integration.Helpers;
 using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CodeCodeChallenge.Tests.Integration
+namespace CodeChallenge.Tests.Integration
 {
     [TestClass]
     public class EmployeeControllerTests
@@ -24,8 +25,9 @@ namespace CodeCodeChallenge.Tests.Integration
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>")]
         public static void InitializeClass(TestContext context)
         {
-            _testServer = new TestServer(WebHost.CreateDefaultBuilder());
-            _httpClient = _testServer.CreateClient();
+            _testServer = new TestServer(WebHost.CreateDefaultBuilder()
+                .UseStartup<TestServerStartup>()
+                .UseEnvironment("Development"));
         }
 
         [ClassCleanup]

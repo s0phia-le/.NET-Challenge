@@ -1,4 +1,3 @@
-using challenge.Models;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
@@ -8,11 +7,12 @@ using System;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-using challenge.DTO;
 using CodeCodeChallenge.Tests.Integration.Helpers;
 using CodeCodeChallenge.Tests.Integration.Extensions;
+using CodeChallenge.DTO;
+using CodeChallenge.Models;
 
-namespace code_challenge.Tests.Integration
+namespace CodeChallenge.Tests.Integration
 {
     [TestClass]
     public class CompensationControllerTests

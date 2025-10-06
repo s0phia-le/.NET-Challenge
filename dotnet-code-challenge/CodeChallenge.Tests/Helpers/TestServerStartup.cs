@@ -8,9 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using CodeChallenge.Repositories;
 using CodeChallenge.Services;
 using CodeChallenge.Helpers;
-using challenge.Services;
 
-namespace code_challenge.Tests.Integration
+namespace CodeChallenge.Tests.Integration
 {
     public class TestServerStartup
     {
@@ -28,12 +27,15 @@ namespace code_challenge.Tests.Integration
             {
                 options.UseInMemoryDatabase("EmployeeDB");
             });
-            services.AddScoped<IEmployeeRepository, EmployeeRespository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddTransient<EmployeeDataSeeder>();
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IReportingStructureService, ReportingStructureService>();
             services.AddScoped<IMapper, Mapper>();
-            services.AddMvc();
+            services.AddMvc(options =>
+            {
+                options.EnableEndpointRouting = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

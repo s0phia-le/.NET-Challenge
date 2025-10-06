@@ -1,11 +1,3 @@
-C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.csproj.AssemblyReference.cache
-C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\rpswa.dswa.cache.json
-C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.AssemblyInfoInputs.cache
-C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.AssemblyInfo.cs
-C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.csproj.CoreCompileInputs.cache
-C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.sourcelink.json
 C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\appsettings.json
 C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\resources\EmployeeSeedData.json
@@ -21,6 +13,14 @@ C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\bin\Debug\net6
 C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.csproj.AssemblyReference.cache
+C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\rpswa.dswa.cache.json
+C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.AssemblyInfoInputs.cache
+C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.AssemblyInfo.cs
+C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.csproj.CoreCompileInputs.cache
+C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.sourcelink.json
 C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\rjimswa.dswa.cache.json
 C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\rjsmrazor.dswa.cache.json
 C:\Users\sophi\.NET-Challenge\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\rjsmcshtml.dswa.cache.json
